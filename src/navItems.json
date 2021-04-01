@@ -1,0 +1,14 @@
+{
+  "navItems": [
+    {
+      "id": 1,
+      "text": "Airports",
+      "path": "/airports"
+    },
+    {
+      "id": 2,
+      "text": "Airlines",
+      "path": "/airlines"
+    }
+  ]
+}
