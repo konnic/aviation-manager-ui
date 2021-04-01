@@ -10,6 +10,7 @@ import {
   postResource,
   updateResource,
 } from "./shared/ResourceService";
+import gmapsApiKey from "./gmapsKey";
 
 const App = () => {
   const [airports, setAirports] = useState([]);
@@ -139,6 +140,7 @@ const App = () => {
                 onUpdateAirport={updateAirport}
                 onDeleteAirport={deleteAirport}
                 onGetAssociatedAirlines={getAssociatedAirlines}
+                gmapsApiKey={gmapsApiKey}
               />
             </>
           )}

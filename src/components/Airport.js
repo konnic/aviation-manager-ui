@@ -7,6 +7,7 @@ const Airport = ({
   associatedAirlines,
   onDeleteAirport,
   onUpdateAirport,
+  gmapsApiKey,
 }) => {
   const [editMode, setEditMode] = useState(false);
   const [code, setCode] = useState("");
@@ -106,7 +107,7 @@ const Airport = ({
         {editMode ? (
           <Map
             onMapClick={handleMapClick}
-            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCxnbsK8kAIVG4DVYNRudSzQu-wcFSWcZc"
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${gmapsApiKey}`}
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `400px` }} />}
             mapElement={<div style={{ height: `100%` }} />}

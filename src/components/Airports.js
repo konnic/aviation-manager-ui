@@ -11,6 +11,7 @@ const Airports = ({
   onGetAssociatedAirlines,
   countries,
   airlines,
+  gmapsApiKey,
 }) => {
   const [addAirportShown, setAddAirportShown] = useState(false);
 
@@ -43,6 +44,7 @@ const Airports = ({
           countries={countries}
           airlines={airlines}
           onCloseAddAirport={() => setAddAirportShown(false)}
+          gmapsApiKey={gmapsApiKey}
         />
       ) : (
         airports.map((airport) => (
@@ -52,6 +54,7 @@ const Airports = ({
             associatedAirlines={onGetAssociatedAirlines(airport.id)}
             onDeleteAirport={onDeleteAirport}
             onUpdateAirport={onUpdateAirport}
+            gmapsApiKey={gmapsApiKey}
           />
         ))
       )}

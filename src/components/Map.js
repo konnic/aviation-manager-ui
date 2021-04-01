@@ -11,7 +11,7 @@ const Map = withScriptjs(
     <GoogleMap
       onClick={(e) => onMapClick(e.latLng.lat(), e.latLng.lng())}
       defaultZoom={8}
-      defaultCenter={{ lat: lat || 50.108, lng: 8.6817 }}
+      defaultCenter={{ lat: lat || 50.108, lng: long || 8.6817 }}
     >
       {lat && long && <Marker position={{ lat: lat, lng: long }} />}
     </GoogleMap>
